@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var jump_height = 200
-var run_speed = 120
+var run_speed = 220
 var strafe_force = 2
 
 func is_colliding():
