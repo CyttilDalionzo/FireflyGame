@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="TileSet" subresource_count="38" version="2.0" version_name="Godot Engine v2.0.stable.official">
-	<ext_resource path="res://Assets/Tiles/SlopeDownMain.png" type="Texture" index="18"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/TinyFlowers01.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/TinyGrass.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/SlopeUpHelper.png" type="Texture" index="17"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/GroundAbyssRight.png" type="Texture" index="11"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/SlopeDownHelper.png" type="Texture" index="3"></ext_resource>
+<resource_file type="TileSet" subresource_count="40" version="2.0" version_name="Godot Engine v2.0.stable.official">
+	<ext_resource path="res://Assets/Tiles/SlopeDownHelper.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/SlopeDownMain.png" type="Texture" index="19"></ext_resource>
 	<ext_resource path="res://Assets/Tiles/Mud.png" type="Texture" index="0"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/Ground02.png" type="Texture" index="9"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/MudAbyssRight.png" type="Texture" index="12"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/GroundAbyssLeft.png" type="Texture" index="14"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/SlopeUpMain.png" type="Texture" index="16"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/MudBottom.png" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/TinyFlowers02.png" type="Texture" index="8"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/Ground01.png" type="Texture" index="2"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/MudAbyssLeft.png" type="Texture" index="15"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/TinyStones.png" type="Texture" index="5"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/Ground01-Normal.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/GroundAbyssLeft-Normal.png" type="Texture" index="13"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/GroundAbyssRight-Normal.png" type="Texture" index="10"></ext_resource>
-	<resource type="ConvexPolygonShape2D" path="local://3">
-		<real name="custom_solver_bias"> 0 </real>
-		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 100, 100, 0, 100 </vector2_array>
-
-	</resource>
-	<resource type="CanvasItemShader" path="local://14">
+	<ext_resource path="res://Assets/Tiles/GroundAbyssRight.png" type="Texture" index="12"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/Ground01.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/GroundAbyssLeft-Normal.png" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/tilemapShader.shd" type="Shader" index="1"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/GroundAbyssLeft.png" type="Texture" index="15"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/MudAbyssRight.png" type="Texture" index="13"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/GroundAbyssRight-Normal.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/SlopeUpMain.png" type="Texture" index="17"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/Ground02.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/Ground01-Normal.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/MudAbyssLeft.png" type="Texture" index="16"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/TinyFlowers01.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/SlopeUpHelper.png" type="Texture" index="18"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/MudBottom.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/TinyStones.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/TinyGrass.png" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/TinyFlowers02.png" type="Texture" index="9"></ext_resource>
+	<resource type="CanvasItemShaderGraph" path="local://20">
 		<dictionary name="_code" shared="false">
 			<string> "fragment" </string>
-			<string> "uniform texture normal;&#000a;//normal maps expect Y-up, but 2D is Y-down, so must mirror this.&#000a;NORMAL = tex(normal,UV).rgb * vec3(2.5,-2.5,1.0) - vec3(1.0,-1.0,0.0);" </string>
+			<string> "" </string>
 			<string> "fragment_ofs" </string>
 			<int> 0 </int>
 			<string> "light" </string>
@@ -39,12 +35,75 @@
 			<string> "vertex_ofs" </string>
 			<int> 0 </int>
 		</dictionary>
+		<dictionary name="_data" shared="false">
+			<string> "shaders" </string>
+			<array  len="3" shared="false">
+				<array  len="12" shared="false">
+					<int> 0 </int>
+					<int> 33 </int>
+					<vector2> 350, 40 </vector2>
+					<nil>  </nil>
+					<nil>  </nil>
+					<array  len="0" shared="false">
+					</array>
+					<int> 1 </int>
+					<int> 0 </int>
+					<vector2> 50, 40 </vector2>
+					<nil>  </nil>
+					<nil>  </nil>
+					<array  len="0" shared="false">
+					</array>
+				</array>
+				<array  len="12" shared="false">
+					<int> 0 </int>
+					<int> 33 </int>
+					<vector2> 350, 40 </vector2>
+					<nil>  </nil>
+					<nil>  </nil>
+					<array  len="0" shared="false">
+					</array>
+					<int> 1 </int>
+					<int> 0 </int>
+					<vector2> 50, 40 </vector2>
+					<nil>  </nil>
+					<nil>  </nil>
+					<array  len="0" shared="false">
+					</array>
+				</array>
+				<array  len="12" shared="false">
+					<int> 0 </int>
+					<int> 33 </int>
+					<vector2> 350, 40 </vector2>
+					<nil>  </nil>
+					<nil>  </nil>
+					<array  len="0" shared="false">
+					</array>
+					<int> 1 </int>
+					<int> 0 </int>
+					<vector2> 50, 40 </vector2>
+					<nil>  </nil>
+					<nil>  </nil>
+					<array  len="0" shared="false">
+					</array>
+				</array>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="CanvasItemMaterial" path="local://21">
+		<resource name="shader/shader" resource_type="Shader" path="local://20">  </resource>
+		<int name="shader/shading_mode"> 0 </int>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://3">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 100, 100, 0, 100 </vector2_array>
 
 	</resource>
 	<resource type="CanvasItemMaterial" path="local://15">
-		<resource name="shader/shader" resource_type="Shader" path="local://14">  </resource>
+		<resource name="shader/shader" external="1">  </resource>
 		<int name="shader/shading_mode"> 0 </int>
-		<resource name="shader_param/normal" external="1">  </resource>
+		<resource name="shader_param/normal" external="2">  </resource>
 
 	</resource>
 	<resource type="ConvexPolygonShape2D" path="local://11">
@@ -62,32 +121,25 @@
 		<vector2_array name="points" len="3"> 			0, 100, 0, 0, 50, 90 </vector2_array>
 
 	</resource>
+	<resource type="CanvasItemMaterial" path="local://22">
+		<resource name="shader/shader" external="1">  </resource>
+		<int name="shader/shading_mode"> 0 </int>
+
+	</resource>
+	<resource type="CanvasItemMaterial" path="local://23">
+		<resource name="shader/shader" external="1">  </resource>
+		<int name="shader/shading_mode"> 0 </int>
+
+	</resource>
 	<resource type="ConvexPolygonShape2D" path="local://2">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 100, 100, 0, 100 </vector2_array>
 
 	</resource>
-	<resource type="CanvasItemShader" path="local://16">
-		<dictionary name="_code" shared="false">
-			<string> "fragment" </string>
-			<string> "uniform texture normal;&#000a;//normal maps expect Y-up, but 2D is Y-down, so must mirror this.&#000a;NORMAL = tex(normal,UV).rgb * vec3(2.5,-2.5,1.0) - vec3(1.0,-1.0,0.0);" </string>
-			<string> "fragment_ofs" </string>
-			<int> 0 </int>
-			<string> "light" </string>
-			<string> "" </string>
-			<string> "light_ofs" </string>
-			<int> 0 </int>
-			<string> "vertex" </string>
-			<string> "" </string>
-			<string> "vertex_ofs" </string>
-			<int> 0 </int>
-		</dictionary>
-
-	</resource>
 	<resource type="CanvasItemMaterial" path="local://17">
-		<resource name="shader/shader" resource_type="Shader" path="local://16">  </resource>
+		<resource name="shader/shader" external="1">  </resource>
 		<int name="shader/shading_mode"> 0 </int>
-		<resource name="shader_param/normal" external="10">  </resource>
+		<resource name="shader_param/normal" external="11">  </resource>
 
 	</resource>
 	<resource type="ConvexPolygonShape2D" path="local://4">
@@ -100,27 +152,10 @@
 		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 60, 60, 0, 100 </vector2_array>
 
 	</resource>
-	<resource type="CanvasItemShader" path="local://18">
-		<dictionary name="_code" shared="false">
-			<string> "fragment" </string>
-			<string> "uniform texture normal;&#000a;//normal maps expect Y-up, but 2D is Y-down, so must mirror this.&#000a;NORMAL = tex(normal,UV).rgb * vec3(2.5,-2.5,1.0) - vec3(1.0,-1.0,0.0);" </string>
-			<string> "fragment_ofs" </string>
-			<int> 0 </int>
-			<string> "light" </string>
-			<string> "" </string>
-			<string> "light_ofs" </string>
-			<int> 0 </int>
-			<string> "vertex" </string>
-			<string> "" </string>
-			<string> "vertex_ofs" </string>
-			<int> 0 </int>
-		</dictionary>
-
-	</resource>
 	<resource type="CanvasItemMaterial" path="local://19">
-		<resource name="shader/shader" resource_type="Shader" path="local://18">  </resource>
+		<resource name="shader/shader" external="1">  </resource>
 		<int name="shader/shading_mode"> 0 </int>
-		<resource name="shader_param/normal" external="13">  </resource>
+		<resource name="shader_param/normal" external="14">  </resource>
 
 	</resource>
 	<resource type="ConvexPolygonShape2D" path="local://6">
@@ -152,7 +187,8 @@
 		<string name="0/name"> "Mud" </string>
 		<resource name="0/texture" external="0">  </resource>
 		<vector2 name="0/tex_offset"> 0, 0 </vector2>
-		<resource name="0/material"></resource>		<rect2 name="0/region"> 0, 0, 100, 100 </rect2>
+		<resource name="0/material" resource_type="CanvasItemMaterial" path="local://21">  </resource>
+		<rect2 name="0/region"> 0, 0, 100, 100 </rect2>
 		<vector2 name="0/occluder_offset"> -0, -0 </vector2>
 		<resource name="0/occluder"></resource>		<vector2 name="0/navigation_offset"> -0, -0 </vector2>
 		<resource name="0/navigation"></resource>		<vector2 name="0/shape_offset"> -0, -0 </vector2>
@@ -160,7 +196,7 @@
 			<resource  resource_type="Shape2D" path="local://3">  </resource>
 		</array>
 		<string name="1/name"> "GroundRegular" </string>
-		<resource name="1/texture" external="2">  </resource>
+		<resource name="1/texture" external="3">  </resource>
 		<vector2 name="1/tex_offset"> 0, 0 </vector2>
 		<resource name="1/material" resource_type="CanvasItemMaterial" path="local://15">  </resource>
 		<rect2 name="1/region"> 0, 0, 100, 100 </rect2>
@@ -171,7 +207,7 @@
 			<resource  resource_type="Shape2D" path="local://3">  </resource>
 		</array>
 		<string name="2/name"> "GroundStone" </string>
-		<resource name="2/texture" external="9">  </resource>
+		<resource name="2/texture" external="10">  </resource>
 		<vector2 name="2/tex_offset"> 0, 0 </vector2>
 		<resource name="2/material"></resource>		<rect2 name="2/region"> 0, 0, 100, 100 </rect2>
 		<vector2 name="2/occluder_offset"> -0, -0 </vector2>
@@ -181,7 +217,7 @@
 			<resource  resource_type="Shape2D" path="local://2">  </resource>
 		</array>
 		<string name="3/name"> "GroundAbyssRight" </string>
-		<resource name="3/texture" external="11">  </resource>
+		<resource name="3/texture" external="12">  </resource>
 		<vector2 name="3/tex_offset"> 0, 0 </vector2>
 		<resource name="3/material" resource_type="CanvasItemMaterial" path="local://17">  </resource>
 		<rect2 name="3/region"> 2, 0, 100, 100 </rect2>
@@ -192,7 +228,7 @@
 			<resource  resource_type="Shape2D" path="local://4">  </resource>
 		</array>
 		<string name="4/name"> "MudAbyssRight" </string>
-		<resource name="4/texture" external="12">  </resource>
+		<resource name="4/texture" external="13">  </resource>
 		<vector2 name="4/tex_offset"> 0, 0 </vector2>
 		<resource name="4/material"></resource>		<rect2 name="4/region"> 2, 0, 100, 100 </rect2>
 		<vector2 name="4/occluder_offset"> -0, -0 </vector2>
@@ -202,7 +238,7 @@
 			<resource  resource_type="Shape2D" path="local://5">  </resource>
 		</array>
 		<string name="5/name"> "GroundAbyssLeft" </string>
-		<resource name="5/texture" external="14">  </resource>
+		<resource name="5/texture" external="15">  </resource>
 		<vector2 name="5/tex_offset"> 0, 0 </vector2>
 		<resource name="5/material" resource_type="CanvasItemMaterial" path="local://19">  </resource>
 		<rect2 name="5/region"> 0, 0, 100, 100 </rect2>
@@ -213,7 +249,7 @@
 			<resource  resource_type="Shape2D" path="local://6">  </resource>
 		</array>
 		<string name="6/name"> "MudAbyssLeft" </string>
-		<resource name="6/texture" external="15">  </resource>
+		<resource name="6/texture" external="16">  </resource>
 		<vector2 name="6/tex_offset"> 0, 0 </vector2>
 		<resource name="6/material"></resource>		<rect2 name="6/region"> 0, 0, 100, 100 </rect2>
 		<vector2 name="6/occluder_offset"> -0, -0 </vector2>
@@ -223,7 +259,7 @@
 			<resource  resource_type="Shape2D" path="local://7">  </resource>
 		</array>
 		<string name="7/name"> "SlopeUpMain" </string>
-		<resource name="7/texture" external="16">  </resource>
+		<resource name="7/texture" external="17">  </resource>
 		<vector2 name="7/tex_offset"> 0, 0 </vector2>
 		<resource name="7/material"></resource>		<rect2 name="7/region"> 0, 0, 100, 100 </rect2>
 		<vector2 name="7/occluder_offset"> -0, -0 </vector2>
@@ -233,7 +269,7 @@
 			<resource  resource_type="Shape2D" path="local://8">  </resource>
 		</array>
 		<string name="8/name"> "SlopeUpHelper" </string>
-		<resource name="8/texture" external="17">  </resource>
+		<resource name="8/texture" external="18">  </resource>
 		<vector2 name="8/tex_offset"> 0, 0 </vector2>
 		<resource name="8/material"></resource>		<rect2 name="8/region"> 2, 0, 100, 100 </rect2>
 		<vector2 name="8/occluder_offset"> -0, -0 </vector2>
@@ -243,7 +279,7 @@
 			<resource  resource_type="Shape2D" path="local://9">  </resource>
 		</array>
 		<string name="9/name"> "SlopeDownMain" </string>
-		<resource name="9/texture" external="18">  </resource>
+		<resource name="9/texture" external="19">  </resource>
 		<vector2 name="9/tex_offset"> 0, 0 </vector2>
 		<resource name="9/material"></resource>		<rect2 name="9/region"> 10, 0, 100, 100 </rect2>
 		<vector2 name="9/occluder_offset"> -0, -0 </vector2>
@@ -253,7 +289,7 @@
 			<resource  resource_type="Shape2D" path="local://10">  </resource>
 		</array>
 		<string name="10/name"> "SlopeDownHelper" </string>
-		<resource name="10/texture" external="3">  </resource>
+		<resource name="10/texture" external="4">  </resource>
 		<vector2 name="10/tex_offset"> 0, 0 </vector2>
 		<resource name="10/material"></resource>		<rect2 name="10/region"> 3, 0, 100, 100 </rect2>
 		<vector2 name="10/occluder_offset"> -0, -0 </vector2>
@@ -263,7 +299,7 @@
 			<resource  resource_type="Shape2D" path="local://11">  </resource>
 		</array>
 		<string name="11/name"> "MudBottom" </string>
-		<resource name="11/texture" external="4">  </resource>
+		<resource name="11/texture" external="5">  </resource>
 		<vector2 name="11/tex_offset"> 0, 0 </vector2>
 		<resource name="11/material"></resource>		<rect2 name="11/region"> 0, 0, 100, 100 </rect2>
 		<vector2 name="11/occluder_offset"> -0, -0 </vector2>
@@ -274,25 +310,27 @@
 			<resource  resource_type="Shape2D" path="local://13">  </resource>
 		</array>
 		<string name="12/name"> "TinyStones" </string>
-		<resource name="12/texture" external="5">  </resource>
+		<resource name="12/texture" external="6">  </resource>
 		<vector2 name="12/tex_offset"> 0, 0 </vector2>
-		<resource name="12/material"></resource>		<rect2 name="12/region"> 0, 0, 100, 100 </rect2>
+		<resource name="12/material" resource_type="CanvasItemMaterial" path="local://22">  </resource>
+		<rect2 name="12/region"> 0, 0, 100, 100 </rect2>
 		<vector2 name="12/occluder_offset"> -0, -0 </vector2>
 		<resource name="12/occluder"></resource>		<vector2 name="12/navigation_offset"> -0, -0 </vector2>
 		<resource name="12/navigation"></resource>		<vector2 name="12/shape_offset"> 0, 0 </vector2>
 		<array name="12/shapes" len="0" shared="false">
 		</array>
 		<string name="13/name"> "TinyGrass" </string>
-		<resource name="13/texture" external="6">  </resource>
+		<resource name="13/texture" external="7">  </resource>
 		<vector2 name="13/tex_offset"> 0, 0 </vector2>
-		<resource name="13/material"></resource>		<rect2 name="13/region"> 0, 0, 100, 100 </rect2>
+		<resource name="13/material" resource_type="CanvasItemMaterial" path="local://23">  </resource>
+		<rect2 name="13/region"> 0, 0, 100, 100 </rect2>
 		<vector2 name="13/occluder_offset"> -0, -0 </vector2>
 		<resource name="13/occluder"></resource>		<vector2 name="13/navigation_offset"> -0, -0 </vector2>
 		<resource name="13/navigation"></resource>		<vector2 name="13/shape_offset"> 0, 0 </vector2>
 		<array name="13/shapes" len="0" shared="false">
 		</array>
 		<string name="14/name"> "TinyFlowers1" </string>
-		<resource name="14/texture" external="7">  </resource>
+		<resource name="14/texture" external="8">  </resource>
 		<vector2 name="14/tex_offset"> 0, 0 </vector2>
 		<resource name="14/material"></resource>		<rect2 name="14/region"> 0, 0, 100, 100 </rect2>
 		<vector2 name="14/occluder_offset"> -0, -0 </vector2>
@@ -301,7 +339,7 @@
 		<array name="14/shapes" len="0" shared="false">
 		</array>
 		<string name="15/name"> "TinyFlowers2" </string>
-		<resource name="15/texture" external="8">  </resource>
+		<resource name="15/texture" external="9">  </resource>
 		<vector2 name="15/tex_offset"> 0, 0 </vector2>
 		<resource name="15/material"></resource>		<rect2 name="15/region"> 0, 0, 100, 100 </rect2>
 		<vector2 name="15/occluder_offset"> -0, -0 </vector2>
