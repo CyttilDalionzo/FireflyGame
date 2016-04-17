@@ -53,12 +53,15 @@ func set_view_direction(is_left = null):
 
 func ground_jump():
 	set_linear_velocity( Vector2(get_linear_velocity().x, -jump_height) )
+	print("ground jump")
 
 func left_wall_jump():
 	set_linear_velocity( 0.7 * Vector2(jump_height, -jump_height * 1.2) )
+	print("wall jump left")
 
 func right_wall_jump():
 	set_linear_velocity( 0.7 * Vector2(-jump_height, -jump_height * 1.2) )
+	print("wall jump right")
 
 func floaty_controls(delta):
 	set_linear_damp(0.9)
