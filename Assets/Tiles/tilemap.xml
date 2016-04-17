@@ -1,32 +1,176 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="TileSet" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.stable.official">
-	<ext_resource path="res://Assets/Tiles/Ground01.png" type="Texture" index="0"></ext_resource>
-	<ext_resource path="res://Assets/Tiles/Ground02.png" type="Texture" index="1"></ext_resource>
-	<resource type="ConvexPolygonShape2D" path="local://1">
+<resource_file type="TileSet" subresource_count="22" version="2.0" version_name="Godot Engine v2.0.stable.official">
+	<ext_resource path="res://Assets/Tiles/GroundAbyssRight.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/Ground01.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/Ground02.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/SlopeUpHelper.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/MudAbyssRight.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/SlopeDownHelper.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/GroundAbyssLeft.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/SlopeUpMain.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/SlopeDownMain.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/MudAbyssLeft.png" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://Assets/Tiles/Mud.png" type="Texture" index="0"></ext_resource>
+	<resource type="ConvexPolygonShape2D" path="local://3">
 		<real name="custom_solver_bias"> 0 </real>
-		<vector2_array name="points" len="4"> 			-50, -50, 50, -50, 50, 50, -50, 50 </vector2_array>
+		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 100, 100, 0, 100 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://11">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 100, 100, 0, 100 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://2">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 100, 100, 0, 100 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://4">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 60, 60, 0, 100 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://5">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 60, 60, 0, 100 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://6">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 100, 100, 40, 60 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://7">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 100, 100, 40, 60 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://8">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			50, 50, 100, 0, 100, 100, 0, 100 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://9">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 100, 0, 100, 100, 0, 100 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://10">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			0, 0, 50, 50, 100, 100, 0, 100 </vector2_array>
 
 	</resource>
 	<main_resource>
-		<string name="0/name"> "Sprite" </string>
+		<string name="0/name"> "Mud" </string>
 		<resource name="0/texture" external="0">  </resource>
 		<vector2 name="0/tex_offset"> 0, 0 </vector2>
-		<resource name="0/material"></resource>		<rect2 name="0/region"> 0, 0, 0, 0 </rect2>
-		<vector2 name="0/occluder_offset"> 50.5, 50 </vector2>
-		<resource name="0/occluder"></resource>		<vector2 name="0/navigation_offset"> 50.5, 50 </vector2>
-		<resource name="0/navigation"></resource>		<vector2 name="0/shape_offset"> 50.5, 50 </vector2>
+		<resource name="0/material"></resource>		<rect2 name="0/region"> 0, 0, 100, 100 </rect2>
+		<vector2 name="0/occluder_offset"> -0, -0 </vector2>
+		<resource name="0/occluder"></resource>		<vector2 name="0/navigation_offset"> -0, -0 </vector2>
+		<resource name="0/navigation"></resource>		<vector2 name="0/shape_offset"> -0, -0 </vector2>
 		<array name="0/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://1">  </resource>
+			<resource  resource_type="Shape2D" path="local://3">  </resource>
 		</array>
-		<string name="1/name"> "Sprite1" </string>
+		<string name="1/name"> "GroundRegular" </string>
 		<resource name="1/texture" external="1">  </resource>
 		<vector2 name="1/tex_offset"> 0, 0 </vector2>
-		<resource name="1/material"></resource>		<rect2 name="1/region"> 0, 0, 0, 0 </rect2>
-		<vector2 name="1/occluder_offset"> 50.5, 50 </vector2>
-		<resource name="1/occluder"></resource>		<vector2 name="1/navigation_offset"> 50.5, 50 </vector2>
-		<resource name="1/navigation"></resource>		<vector2 name="1/shape_offset"> 50.5, 50 </vector2>
+		<resource name="1/material"></resource>		<rect2 name="1/region"> 0, 0, 100, 100 </rect2>
+		<vector2 name="1/occluder_offset"> -0, -0 </vector2>
+		<resource name="1/occluder"></resource>		<vector2 name="1/navigation_offset"> -0, -0 </vector2>
+		<resource name="1/navigation"></resource>		<vector2 name="1/shape_offset"> -0, -0 </vector2>
 		<array name="1/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://1">  </resource>
+			<resource  resource_type="Shape2D" path="local://3">  </resource>
+		</array>
+		<string name="2/name"> "GroundStone" </string>
+		<resource name="2/texture" external="3">  </resource>
+		<vector2 name="2/tex_offset"> 0, 0 </vector2>
+		<resource name="2/material"></resource>		<rect2 name="2/region"> 0, 0, 100, 100 </rect2>
+		<vector2 name="2/occluder_offset"> -0, -0 </vector2>
+		<resource name="2/occluder"></resource>		<vector2 name="2/navigation_offset"> -0, -0 </vector2>
+		<resource name="2/navigation"></resource>		<vector2 name="2/shape_offset"> -0, -0 </vector2>
+		<array name="2/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://2">  </resource>
+		</array>
+		<string name="3/name"> "GroundAbyssRight" </string>
+		<resource name="3/texture" external="4">  </resource>
+		<vector2 name="3/tex_offset"> 0, 0 </vector2>
+		<resource name="3/material"></resource>		<rect2 name="3/region"> 2, 0, 100, 100 </rect2>
+		<vector2 name="3/occluder_offset"> -0, -0 </vector2>
+		<resource name="3/occluder"></resource>		<vector2 name="3/navigation_offset"> -0, -0 </vector2>
+		<resource name="3/navigation"></resource>		<vector2 name="3/shape_offset"> -0, -0 </vector2>
+		<array name="3/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://4">  </resource>
+		</array>
+		<string name="4/name"> "MudAbyssRight" </string>
+		<resource name="4/texture" external="5">  </resource>
+		<vector2 name="4/tex_offset"> 0, 0 </vector2>
+		<resource name="4/material"></resource>		<rect2 name="4/region"> 2, 0, 100, 100 </rect2>
+		<vector2 name="4/occluder_offset"> -0, -0 </vector2>
+		<resource name="4/occluder"></resource>		<vector2 name="4/navigation_offset"> -0, -0 </vector2>
+		<resource name="4/navigation"></resource>		<vector2 name="4/shape_offset"> -0, -0 </vector2>
+		<array name="4/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://5">  </resource>
+		</array>
+		<string name="5/name"> "GroundAbyssLeft" </string>
+		<resource name="5/texture" external="6">  </resource>
+		<vector2 name="5/tex_offset"> 0, 0 </vector2>
+		<resource name="5/material"></resource>		<rect2 name="5/region"> 0, 0, 100, 100 </rect2>
+		<vector2 name="5/occluder_offset"> -0, -0 </vector2>
+		<resource name="5/occluder"></resource>		<vector2 name="5/navigation_offset"> -0, -0 </vector2>
+		<resource name="5/navigation"></resource>		<vector2 name="5/shape_offset"> -0, -0 </vector2>
+		<array name="5/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://6">  </resource>
+		</array>
+		<string name="6/name"> "MudAbyssLeft" </string>
+		<resource name="6/texture" external="7">  </resource>
+		<vector2 name="6/tex_offset"> 0, 0 </vector2>
+		<resource name="6/material"></resource>		<rect2 name="6/region"> 0, 0, 100, 100 </rect2>
+		<vector2 name="6/occluder_offset"> -0, -0 </vector2>
+		<resource name="6/occluder"></resource>		<vector2 name="6/navigation_offset"> -0, -0 </vector2>
+		<resource name="6/navigation"></resource>		<vector2 name="6/shape_offset"> -0, -0 </vector2>
+		<array name="6/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<string name="7/name"> "SlopeUpMain" </string>
+		<resource name="7/texture" external="8">  </resource>
+		<vector2 name="7/tex_offset"> 0, 0 </vector2>
+		<resource name="7/material"></resource>		<rect2 name="7/region"> 0, 0, 100, 100 </rect2>
+		<vector2 name="7/occluder_offset"> -0, -0 </vector2>
+		<resource name="7/occluder"></resource>		<vector2 name="7/navigation_offset"> -0, -0 </vector2>
+		<resource name="7/navigation"></resource>		<vector2 name="7/shape_offset"> -0, -0 </vector2>
+		<array name="7/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://8">  </resource>
+		</array>
+		<string name="8/name"> "SlopeUpHelper" </string>
+		<resource name="8/texture" external="9">  </resource>
+		<vector2 name="8/tex_offset"> 0, 0 </vector2>
+		<resource name="8/material"></resource>		<rect2 name="8/region"> 2, 0, 100, 100 </rect2>
+		<vector2 name="8/occluder_offset"> -0, -0 </vector2>
+		<resource name="8/occluder"></resource>		<vector2 name="8/navigation_offset"> -0, -0 </vector2>
+		<resource name="8/navigation"></resource>		<vector2 name="8/shape_offset"> -0, -0 </vector2>
+		<array name="8/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://9">  </resource>
+		</array>
+		<string name="9/name"> "SlopeDownMain" </string>
+		<resource name="9/texture" external="10">  </resource>
+		<vector2 name="9/tex_offset"> 0, 0 </vector2>
+		<resource name="9/material"></resource>		<rect2 name="9/region"> 10, 0, 100, 100 </rect2>
+		<vector2 name="9/occluder_offset"> -0, -0 </vector2>
+		<resource name="9/occluder"></resource>		<vector2 name="9/navigation_offset"> -0, -0 </vector2>
+		<resource name="9/navigation"></resource>		<vector2 name="9/shape_offset"> -0, -0 </vector2>
+		<array name="9/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://10">  </resource>
+		</array>
+		<string name="10/name"> "SlopeDownHelper" </string>
+		<resource name="10/texture" external="2">  </resource>
+		<vector2 name="10/tex_offset"> 0, 0 </vector2>
+		<resource name="10/material"></resource>		<rect2 name="10/region"> 3, 0, 100, 100 </rect2>
+		<vector2 name="10/occluder_offset"> -0, -0 </vector2>
+		<resource name="10/occluder"></resource>		<vector2 name="10/navigation_offset"> -0, -0 </vector2>
+		<resource name="10/navigation"></resource>		<vector2 name="10/shape_offset"> -0, -0 </vector2>
+		<array name="10/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://11">  </resource>
 		</array>
 
 	</main_resource>
