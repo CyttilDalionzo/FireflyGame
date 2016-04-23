@@ -66,6 +66,7 @@ func right_wall_jump():
 func floaty_controls(delta):
 	set_linear_damp(0.9)
 	get_node("FeetParticles").set_emitting(false)
+	get_node("FeetParticlesGrass").set_emitting(false)
 	
 	if Input.is_action_pressed("ui_left"):
 		apply_impulse(Vector2(), Vector2(-strafe_force, 0))
@@ -77,8 +78,11 @@ func floaty_controls(delta):
 func floory_controls(delta):
 	if abs(get_linear_velocity().x) > 50:
 		get_node("FeetParticles").set_emitting(true)
+		if rand_range(0,2) > 1.95:
+			get_node("FeetParticlesGrass").set_emitting(true)
 	else:
 		get_node("FeetParticles").set_emitting(false)
+		get_node("FeetParticlesGrass").set_emitting(false)
 	
 	if Input.is_action_pressed("ui_left"):
 		apply_impulse(Vector2(), Vector2(-0.05 * (get_linear_velocity().x+run_speed), -1))
