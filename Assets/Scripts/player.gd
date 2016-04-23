@@ -3,6 +3,7 @@ extends RigidBody2D
 var jump_height = 350
 var run_speed = 300
 var strafe_force = 4
+var playerScale = 0.85
 
 func are_feet_colliding():
 	return get_node("Feet").get_overlapping_bodies().size() > 0
@@ -41,15 +42,15 @@ func _input(event):
 func set_view_direction(is_left = null):
 	if is_left == null:
 		if get_linear_velocity().x < 0:
-			get_node("Sprite").set_scale(0.4 * Vector2(-1, 1))
+			get_node("BodyIK").set_scale(playerScale * Vector2(-1, 1))
 		else:
-			get_node("Sprite").set_scale(0.4 * Vector2(1, 1))
+			get_node("BodyIK").set_scale(playerScale * Vector2(1, 1))
 		return
 	
 	if is_left:
-		get_node("Sprite").set_scale(0.4 * Vector2(1, 1))
+		get_node("BodyIK").set_scale(playerScale * Vector2(1, 1))
 	else:
-		get_node("Sprite").set_scale(0.4 * Vector2(-1, 1))
+		get_node("BodyIK").set_scale(playerScale * Vector2(-1, 1))
 
 func ground_jump():
 	set_linear_velocity( Vector2(get_linear_velocity().x, -jump_height) )
@@ -86,9 +87,9 @@ func floory_controls(delta):
 	
 	if Input.is_action_pressed("ui_left"):
 		apply_impulse(Vector2(), Vector2(-0.05 * (get_linear_velocity().x+run_speed), -1))
-		get_node("Sprite").set_scale(0.4 * Vector2(-1, 1))
+		get_node("BodyIK").set_scale(playerScale * Vector2(-1, 1))
 	elif Input.is_action_pressed("ui_right"):
 		apply_impulse(Vector2(), Vector2(-0.05 * (get_linear_velocity().x-run_speed), -1))
-		get_node("Sprite").set_scale(0.4 * Vector2(1, 1))
+		get_node("BodyIK").set_scale(playerScale * Vector2(1, 1))
 	elif !Input.is_action_pressed("jump"):
 		set_linear_damp(10.0)
