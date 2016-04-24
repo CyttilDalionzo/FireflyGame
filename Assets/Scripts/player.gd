@@ -29,6 +29,12 @@ func _fixed_process(delta):
 		floory_controls(delta)
 	else:
 		floaty_controls(delta)
+	
+	var getOverlappingBodies = get_node("BodyIK/OverallBody").get_overlapping_bodies()
+	for i in range(0,getOverlappingBodies.size()):
+		if(getOverlappingBodies[i].is_in_group("Fireflies")):
+			getOverlappingBodies[i].set_sleeping(true)
+			getOverlappingBodies[i].hide()
 
 func _input(event):
 	if event.is_action_pressed("jump") and !event.is_echo():
@@ -54,15 +60,15 @@ func set_view_direction(is_left = null):
 
 func ground_jump():
 	set_linear_velocity( Vector2(get_linear_velocity().x, -jump_height) )
-	print("ground jump")
+	#print("ground jump")
 
 func left_wall_jump():
 	set_linear_velocity( 0.7 * Vector2(jump_height, -jump_height * 1.2) )
-	print("wall jump left")
+	#print("wall jump left")
 
 func right_wall_jump():
 	set_linear_velocity( 0.7 * Vector2(-jump_height, -jump_height * 1.2) )
-	print("wall jump right")
+	#print("wall jump right")
 
 func floaty_controls(delta):
 	set_linear_damp(0.9)
