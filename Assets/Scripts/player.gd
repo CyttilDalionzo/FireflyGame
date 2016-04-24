@@ -75,6 +75,7 @@ func floaty_controls(delta):
 		apply_impulse(Vector2(), Vector2(strafe_force, 0))
 	
 	set_view_direction()
+	setAnimation("jump")
 
 func floory_controls(delta):
 	if abs(get_linear_velocity().x) > 50:
@@ -88,8 +89,15 @@ func floory_controls(delta):
 	if Input.is_action_pressed("ui_left"):
 		apply_impulse(Vector2(), Vector2(-0.05 * (get_linear_velocity().x+run_speed), -1))
 		get_node("BodyIK").set_scale(playerScale * Vector2(-1, 1))
+		setAnimation("run")
 	elif Input.is_action_pressed("ui_right"):
 		apply_impulse(Vector2(), Vector2(-0.05 * (get_linear_velocity().x-run_speed), -1))
 		get_node("BodyIK").set_scale(playerScale * Vector2(1, 1))
+		setAnimation("run")
 	elif !Input.is_action_pressed("jump"):
 		set_linear_damp(10.0)
+		setAnimation("idle")
+
+func setAnimation(animName):
+	if(get_node("BodyIK/AnimationPlayer").get_current_animation() != animName):
+		get_node("BodyIK/AnimationPlayer").play(animName)
