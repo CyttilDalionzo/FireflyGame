@@ -1,13 +1,10 @@
 extends VBoxContainer
 
-var firefly
-
 func _ready():
 	get_node("Start").grab_focus()
-	firefly = preload("res://Assets/Sprites/firefly.scn");
-	for i in range(0,20):
-		var newF = firefly.instance()
-		add_child(newF)
+	#var firefly = preload("res://Assets/Sprites/firefly.scn");
+	#for i in range(0,20):
+	#	add_child(firefly.instance())
 
 func _on_Start_pressed():
 	get_tree().change_scene("res://Levels/Menus/level_select.scn")

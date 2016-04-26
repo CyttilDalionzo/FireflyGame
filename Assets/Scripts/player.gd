@@ -108,6 +108,8 @@ func floory_controls(delta):
 	elif !Input.is_action_pressed("jump"):
 		set_linear_damp(10.0)
 		setAnimation("idle")
+	
+	set_view_direction()
 
 func setAnimation(animName):
 	if(get_node("BodyIK/AnimationPlayer").get_current_animation() != animName):
