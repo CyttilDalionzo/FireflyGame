@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var jump_height = 350
+var jump_height = 550
 var run_speed = 300
 var strafe_force = 4
 var playerScale = 0.85
@@ -81,7 +81,10 @@ func floaty_controls(delta):
 		apply_impulse(Vector2(), Vector2(strafe_force, 0))
 	
 	set_view_direction()
-	setAnimation("jump")
+	if(get_linear_velocity().y < 0):
+		setAnimation("jump")
+	else:
+		setAnimation("fall")
 
 func floory_controls(delta):
 	if abs(get_linear_velocity().x) > 50:
@@ -100,6 +103,8 @@ func floory_controls(delta):
 		apply_impulse(Vector2(), Vector2(-0.05 * (get_linear_velocity().x-run_speed), -1))
 		get_node("BodyIK").set_scale(playerScale * Vector2(1, 1))
 		setAnimation("run")
+	elif get_linear_velocity().y > 0:
+		setAnimation("slide")
 	elif !Input.is_action_pressed("jump"):
 		set_linear_damp(10.0)
 		setAnimation("idle")
