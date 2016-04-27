@@ -30,11 +30,11 @@ func _fixed_process(delta):
 	else:
 		floaty_controls(delta)
 	
-	var getOverlappingBodies = get_node("BodyIK/OverallBody").get_overlapping_bodies()
-	for i in range(0,getOverlappingBodies.size()):
-		if(getOverlappingBodies[i].is_in_group("Fireflies")):
-			getOverlappingBodies[i].set_sleeping(true)
-			getOverlappingBodies[i].hide()
+	var get_overlapping_bodies = get_node("BodyIK/OverallBody").get_overlapping_bodies()
+	for i in range(get_overlapping_bodies.size()):
+		if(get_overlapping_bodies[i].is_in_group("Fireflies")):
+			get_overlapping_bodies[i].set_sleeping(true)
+			get_overlapping_bodies[i].hide()
 
 func _input(event):
 	if event.is_action_pressed("jump") and !event.is_echo():
@@ -82,14 +82,14 @@ func floaty_controls(delta):
 	
 	set_view_direction()
 	if(get_linear_velocity().y < 0):
-		setAnimation("jump")
+		set_animation("jump")
 	else:
-		setAnimation("fall")
+		set_animation("fall")
 
 func floory_controls(delta):
 	if abs(get_linear_velocity().x) > 50:
 		get_node("FeetParticles").set_emitting(true)
-		if rand_range(0,2) > 1.95:
+		if randf() > 0.97:
 			get_node("FeetParticlesGrass").set_emitting(true)
 	else:
 		get_node("FeetParticles").set_emitting(false)
@@ -98,19 +98,19 @@ func floory_controls(delta):
 	if Input.is_action_pressed("ui_left"):
 		apply_impulse(Vector2(), Vector2(-0.05 * (get_linear_velocity().x+run_speed), -1))
 		get_node("BodyIK").set_scale(playerScale * Vector2(-1, 1))
-		setAnimation("run")
+		set_animation("run")
 	elif Input.is_action_pressed("ui_right"):
 		apply_impulse(Vector2(), Vector2(-0.05 * (get_linear_velocity().x-run_speed), -1))
 		get_node("BodyIK").set_scale(playerScale * Vector2(1, 1))
-		setAnimation("run")
+		set_animation("run")
 	elif get_linear_velocity().y > 0:
-		setAnimation("slide")
+		set_animation("slide")
 	elif !Input.is_action_pressed("jump"):
 		set_linear_damp(10.0)
-		setAnimation("idle")
+		set_animation("idle")
 	
 	set_view_direction()
 
-func setAnimation(animName):
-	if(get_node("BodyIK/AnimationPlayer").get_current_animation() != animName):
-		get_node("BodyIK/AnimationPlayer").play(animName)
+func set_animation(anim_name):
+	if(get_node("BodyIK/AnimationPlayer").get_current_animation() != anim_name):
+		get_node("BodyIK/AnimationPlayer").play(anim_name)
