@@ -35,6 +35,9 @@ func _fixed_process(delta):
 		if(get_overlapping_bodies[i].is_in_group("Fireflies")):
 			get_overlapping_bodies[i].set_sleeping(true)
 			get_overlapping_bodies[i].hide()
+		elif(get_overlapping_bodies[i].is_in_group("Platforms")):
+			set_pos(get_pos()+Vector2(get_overlapping_bodies[i].get_linear_velocity().x*delta,0))
+	
 
 func _input(event):
 	if event.is_action_pressed("jump") and !event.is_echo():
