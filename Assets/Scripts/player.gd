@@ -106,7 +106,7 @@ func floory_controls(delta):
 		apply_impulse(Vector2(), Vector2(-0.05 * (get_linear_velocity().x-run_speed), -1))
 		get_node("BodyIK").set_scale(playerScale * Vector2(1, 1))
 		set_animation("run")
-	elif get_linear_velocity().y > 0:
+	elif get_linear_velocity().y > 25:
 		set_animation("slide")
 	elif !Input.is_action_pressed("jump"):
 		set_linear_damp(10.0)
